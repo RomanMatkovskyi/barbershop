@@ -1,0 +1,166 @@
+:root {
+  --pre-titlecolor: rgba(157, 164, 189, 0.6);
+  --pre-titlecolorb: #303030;
+  --white-title: #ffffff;
+  --black-title: #303030;
+  --text-color: #9da4bd;
+  --color-subtitle: #555555;
+  --hover-color: #FF6C00;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: lightgrey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+/* ------------HEADER----------- */
+.header {
+  padding-top: 40px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mob-menu {
+  margin-right: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+/* ------------HERO----------- */
+.hero {
+  padding-top: 112px;
+  padding-bottom: 209px;
+  background-color: lightgoldenrodyellow;
+}
+.pretitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pre-titlecolor);
+}
+
+.pretitle::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: var(--pre-titlecolor);
+}
+
+.main-title {
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: var(--white-title);
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+
+/* ------------About----------- */
+.about {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.pretitle-about {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--pre-titlecolorb);
+}
+
+.pretitle-about::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--pre-titlecolorb);
+  display: block;
+  margin-right: 20px;
+}
+
+.secondary-title {
+  width: 306px;
+  margin-bottom: 20px;
+  font-family: 'Raleway';
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--black-title);
+}
+
+.subtitle-about {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.02em;
+  color: var(--color-subtitle);
+}
+
+.about-text{
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: var(--color-subtitle);
+}
+
+.btn-book {
+  padding: 12px 20px;
+  border: 1px solid var(--hover-color);
+  border-radius: 25px;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--black-title);
+}

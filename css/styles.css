@@ -5,7 +5,7 @@
   --black-title: #303030;
   --text-color: #9da4bd;
   --color-subtitle: #555555;
-  --hover-color: #FF6C00;
+  --hover-color: #ff6c00;
 }
 
 body {
@@ -37,6 +37,11 @@ ul {
   margin: 0 auto;
   padding-left: 31px;
   padding-right: 31px;
+}
+
+.section-pad {
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 
 /* ------------HEADER----------- */
@@ -100,11 +105,6 @@ ul {
 }
 
 /* ------------About----------- */
-.about {
-  padding-top: 84px;
-  padding-bottom: 84px;
-}
-
 .pretitle-about {
   display: flex;
   align-items: center;
@@ -143,7 +143,7 @@ ul {
   color: var(--color-subtitle);
 }
 
-.about-text{
+.about-text {
   margin-bottom: 40px;
   font-size: 14px;
   line-height: 1.86;
@@ -164,3 +164,107 @@ ul {
   text-transform: uppercase;
   color: var(--black-title);
 }
+
+/* ------------Prices----------- */
+.price-title {
+  margin-bottom: 44px;
+  font-family: 'Raleway';
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.05em;
+  color: var(--white-title);
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  padding: 30px 20px;
+  margin-bottom: 44px;
+}
+
+.price-list {
+  margin: 0;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.price-text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+
+.price-item::before {
+  content: '';
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: #ff6c00;
+}
+
+.price-text:first-child {
+  order: -1;
+}
+
+.btnpr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------Benefits----------- */
+.benefits {
+  background-color: lightcoral;
+}
+
+.subtitle-benefits {
+  margin-bottom: 44px;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--color-subtitle);
+}
+
+.benefits-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.benefits-item {
+  padding: 20px;
+  width: 193px;
+  height: 133px;
+  background-color: #F7F7F7;
+  text-align: center;
+}
+
+.benefits-value {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 57px;
+  letter-spacing: 0.05em;
+  color: var(--black-title);
+}
+
+.benefits-text {
+  width: 122px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--black-title);
+}
+

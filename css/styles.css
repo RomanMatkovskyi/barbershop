@@ -6,10 +6,12 @@
   --text-color: #9da4bd;
   --color-subtitle: #555555;
   --hover-color: #ff6c00;
+  --section-bgc: #191c26;
+  --footer-bgc: #f7f7f7;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: lightgrey;
 }
 
@@ -24,11 +26,16 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+img {
+  display: block;
 }
 
 .container {
@@ -39,7 +46,7 @@ ul {
   padding-right: 31px;
 }
 
-.section-pad {
+.section_pad {
   padding-top: 84px;
   padding-bottom: 84px;
 }
@@ -80,7 +87,7 @@ ul {
 }
 
 .pretitle::before {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 1px;
@@ -90,7 +97,7 @@ ul {
 
 .main-title {
   margin-bottom: 20px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 48px;
   line-height: 1.17;
   letter-spacing: 0.05em;
@@ -117,7 +124,7 @@ ul {
 }
 
 .pretitle-about::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: var(--pre-titlecolorb);
@@ -128,7 +135,7 @@ ul {
 .secondary-title {
   width: 306px;
   margin-bottom: 20px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 28px;
   line-height: 1.18;
   letter-spacing: 0.05em;
@@ -168,7 +175,7 @@ ul {
 /* ------------Prices----------- */
 .price-title {
   margin-bottom: 44px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 40px;
   line-height: 47px;
   letter-spacing: 0.05em;
@@ -205,7 +212,7 @@ ul {
 }
 
 .price-item::before {
-  content: '';
+  content: "";
   height: 1px;
   flex-grow: 1;
   margin-left: 4px;
@@ -236,7 +243,7 @@ ul {
   color: var(--color-subtitle);
 }
 
-.benefits-list{
+.benefits-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -246,7 +253,7 @@ ul {
   padding: 20px;
   width: 193px;
   height: 133px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   text-align: center;
 }
 
@@ -268,3 +275,278 @@ ul {
   color: var(--black-title);
 }
 
+/* ------------Barbers----------- */
+.barbers_title {
+  margin-bottom: 44px;
+}
+
+.barbers_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+}
+
+.barber_item {
+  text-align: center;
+}
+
+.barber_wrap {
+  padding: 30px 106px 0;
+}
+
+.barber_title {
+  margin-bottom: 8px;
+}
+
+.barber_subtitle {
+  margin-bottom: 30px;
+  color: var(--hover-color);
+}
+
+.soclinks {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.soclink {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 20px;
+  transition: fill 0.2s ease;
+}
+
+.soclink:hover {
+  fill: var(--hover-color);
+}
+
+/* ------------Gallery----------- */
+.pretitle-gallery {
+  margin-bottom: 71px;
+}
+
+.gallery_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ---------Booking----------- */
+.booking {
+  background-color: var(--section-bgc);
+}
+
+.booking_title {
+  text-align: center;
+  margin-bottom: 44px;
+  font-family: "Raleway";
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.05em;
+  color: var(--white-title);
+}
+
+.booking_form {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.name_label {
+  position: absolute;
+  top: 5px;
+}
+
+.name_input {
+  width: 418px;
+  padding: 5px;
+  margin-bottom: 67px;
+}
+
+.phone_label {
+  position: absolute;
+  top: 105px;
+}
+
+.phone_input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 119px;
+}
+
+.message_label {
+  position: absolute;
+  top: 257px;
+}
+
+.message_input {
+  width: 100%;
+  padding: 5px;
+}
+
+.name_input:focus,
+.phone_input:focus,
+.message_input:focus {
+  color: var(--white-title);
+  border-color: var(--white-title);
+}
+
+.name_input:focus + .name_label {
+  transform: translateY(-100%);
+  font-size: 12px;
+  color: #333;
+}
+
+.name_input:focus + .name_label:not(:placeholder-shown) {
+  transform: translateY(-100%);
+}
+
+.booking_form > label {
+  color: #9da4bd66;
+}
+
+.booking_form input {
+  border: none;
+  border-bottom: 1px solid #9da4bd66;
+  background-color: transparent;
+  color: var(--white-title);
+}
+
+.send_btn {
+  display: block;
+  margin: 44px auto 0;
+  color: var(--white-title);
+  text-align: center;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 12px 38px;
+  border: 1px solid var(--hover-color);
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.send_btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* ---------Contacts----------- */
+.contacts {
+  background-image: url("../images/contacts_bg_img.jpg");
+  background: linear-gradient(rgba(25, 28, 38, 0.8), rgba(25, 28, 38, 0.8)),
+    url("../images/contacts_bg_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact_title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Raleway";
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.05em;
+  color: var(--white-title);
+}
+
+.contact_item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  font-weight: 700;
+}
+.contact_link {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--pre-titlecolor);
+}
+
+.contact_item:last-child {
+  margin-bottom: 44px;
+}
+
+.contact_pretitle {
+  color: var(--white-title);
+  font-family: Open Sans;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact_pretitle::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--pre-titlecolor);
+  display: block;
+  margin-right: 20px;
+}
+
+.schedule {
+  color: var(--text-color);
+  font-size: 18px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: 0.36px;
+}
+
+.contact_icon {
+  margin-right: 16px;
+}
+
+/* ---------Footer----------- */
+.footer {
+  padding-top: 44px;
+  padding-bottom: 44px;
+  background-color: var(--footer-bgc);
+}
+.footer_links_list {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.footer_links_list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--pre-titlecolorb);
+}
+
+.footer_link {
+  color: var(--pre-titlecolorb);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.2px;
+}
+
+.copyright {
+  color: var(--text-color);
+  font-family: Open Sans;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.2px;
+}

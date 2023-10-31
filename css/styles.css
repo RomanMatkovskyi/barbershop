@@ -38,6 +38,19 @@ img {
   display: block;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .container {
   width: 100%;
   max-width: 480px;
@@ -51,12 +64,32 @@ img {
   padding-bottom: 84px;
 }
 
+.white_title {
+  color: var(--white-title);
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.black_title {
+  color: #303030;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2.1px;
+}
+
 /* ------------HEADER----------- */
 .header {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
   padding-top: 40px;
 }
 
 .header-flex {
+  max-width: 480px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,13 +99,16 @@ img {
   margin-right: 8px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 /* ------------HERO----------- */
 .hero {
-  padding-top: 112px;
+  padding-top: 208px;
   padding-bottom: 209px;
-  background-color: lightgoldenrodyellow;
+  background-image: url("../images/hero_bgi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pretitle {
   display: flex;
@@ -95,13 +131,9 @@ img {
   background-color: var(--pre-titlecolor);
 }
 
-.main-title {
+.main_title {
   margin-bottom: 20px;
-  font-family: "Raleway", sans-serif;
   font-size: 48px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
-  color: var(--white-title);
 }
 
 .subtitle {
@@ -112,6 +144,9 @@ img {
 }
 
 /* ------------About----------- */
+.about {
+  background-color: var(--white-title);
+}
 .pretitle-about {
   display: flex;
   align-items: center;
@@ -132,14 +167,10 @@ img {
   margin-right: 20px;
 }
 
-.secondary-title {
+.about-title {
   width: 306px;
   margin-bottom: 20px;
-  font-family: "Raleway";
   font-size: 28px;
-  line-height: 1.18;
-  letter-spacing: 0.05em;
-  color: var(--black-title);
 }
 
 .subtitle-about {
@@ -170,16 +201,26 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--black-title);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-book:hover {
+  background-color: var(--hover-color);
 }
 
 /* ------------Prices----------- */
-.price-title {
+.prices {
+  background-image: linear-gradient(#111319c0, #111319c0),
+    url("../images/service_bgi.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.price_title {
   margin-bottom: 44px;
-  font-family: "Raleway";
   font-size: 40px;
-  line-height: 47px;
-  letter-spacing: 0.05em;
-  color: var(--white-title);
 }
 
 .price-container {
@@ -217,7 +258,7 @@ img {
   flex-grow: 1;
   margin-left: 4px;
   margin-right: 4px;
-  background-color: #ff6c00;
+  background-color: var(--pre-titlecolor);
 }
 
 .price-text:first-child {
@@ -228,11 +269,12 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  color: var(--white-title);
 }
 
 /* ------------Benefits----------- */
 .benefits {
-  background-color: lightcoral;
+  background-color: var(--white-title);
 }
 
 .subtitle-benefits {
@@ -244,25 +286,50 @@ img {
 }
 
 .benefits-list {
+  width: 416px;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .benefits-item {
-  padding: 20px;
   width: 193px;
   height: 133px;
+  padding: 20px;
   background-color: #f7f7f7;
   text-align: center;
 }
 
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
+
+/* .benefits-item:nth-child(2) {
+  margin-top: 35px;
+} */
+
 .benefits-value {
+  position: relative;
   font-weight: 700;
   font-size: 42px;
   line-height: 57px;
   letter-spacing: 0.05em;
   color: var(--black-title);
+}
+.span_plus {
+  position: absolute;
+  top: 8px;
+  color: var(--hover-color);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .benefits-text {
@@ -276,6 +343,9 @@ img {
 }
 
 /* ------------Barbers----------- */
+.barbers {
+  background-color: var(--footer-bgc);
+}
 .barbers_title {
   margin-bottom: 44px;
 }
@@ -323,6 +393,9 @@ img {
 }
 
 /* ------------Gallery----------- */
+.gallery {
+  background-color: var(--white-title);
+}
 .pretitle-gallery {
   margin-bottom: 71px;
 }
@@ -351,12 +424,17 @@ img {
 .booking_form {
   display: flex;
   flex-wrap: wrap;
+}
+.input_wrap {
   position: relative;
 }
 
 .name_label {
+  color: var(--pre-titlecolor);
   position: absolute;
   top: 5px;
+  left: 5px;
+  transition: all 0.5s ease;
 }
 
 .name_input {
@@ -366,23 +444,29 @@ img {
 }
 
 .phone_label {
+  color: var(--pre-titlecolor);
   position: absolute;
-  top: 105px;
+  top: 5px;
+  left: 5px;
+  transition: all 0.5s ease;
 }
 
 .phone_input {
-  width: 100%;
+  width: 418px;
   padding: 5px;
   margin-bottom: 119px;
 }
 
 .message_label {
+  color: var(--pre-titlecolor);
   position: absolute;
-  top: 257px;
+  top: 5px;
+  left: 5px;
+  transition: all 0.5s ease;
 }
 
 .message_input {
-  width: 100%;
+  width: 418px;
   padding: 5px;
 }
 
@@ -391,16 +475,34 @@ img {
 .message_input:focus {
   color: var(--white-title);
   border-color: var(--white-title);
+  outline: none;
 }
 
 .name_input:focus + .name_label {
-  transform: translateY(-100%);
-  font-size: 12px;
-  color: #333;
+  transform: translateY(-25px);
+  color: #ffffff;
 }
 
-.name_input:focus + .name_label:not(:placeholder-shown) {
-  transform: translateY(-100%);
+.name_input:not(:placeholder-shown) + .name_label {
+  transform: translateY(-25px);
+}
+
+.phone_input:focus + .phone_label {
+  transform: translateY(-25px);
+  color: #ffffff;
+}
+
+.phone_input:not(:placeholder-shown) + .phone_label {
+  transform: translateY(-25px);
+}
+
+.message_input:focus + .message_label {
+  transform: translateY(-25px);
+  color: #ffffff;
+}
+
+.message_input:not(:placeholder-shown) + .message_label {
+  transform: translateY(-25px);
 }
 
 .booking_form > label {
@@ -431,6 +533,7 @@ img {
   border: 1px solid var(--hover-color);
   border-radius: 25px;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .send_btn:hover {
@@ -549,4 +652,100 @@ img {
   font-weight: 600;
   line-height: normal;
   letter-spacing: 2.2px;
+}
+
+/* ---------Modal----------- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--white-title);
+  padding: 40px 31px 40px 40px;
+  width: 100%;
+  max-width: 337px;
+  height: 100%;
+}
+
+.close_modal {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 30px auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal_navlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.modal_navitem {
+  width: 100%;
+  color: var(--black-title);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  transition: color 0.2s ease;
+}
+
+.modal_navitem:hover {
+  color: var(--hover-color);
+}
+
+.modal_contact {
+  display: block;
+  color: var(--black-title);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  margin-bottom: 19px;
+}
+
+.modal_soclinks {
+  margin-top: 69px;
+  color: var(--black-title);
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.8px;
+}
+
+.modal_inst {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal_inst::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background-color: var(--black-title);
+  margin-right: 40px;
+}
+
+.modal_utube {
+  margin-left: 100px;
 }
